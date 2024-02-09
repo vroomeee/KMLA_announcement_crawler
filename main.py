@@ -9,7 +9,7 @@ chrome_options = Options()
 
 # Get login info
 import pickle
-with open('./private/passwords.pickle', 'rb') as f:
+with open('../private/passwords.pickle', 'rb') as f:
     login_info = pickle.load(f)
 
 # Instantiate a WebDriver object (for example, using Chrome)
@@ -34,7 +34,7 @@ login_button.click()
 # New announcement
 def append_announcement():
     global history
-    with open('./private/history/kmlaonline.txt', 'w', encoding='utf-8') as f:
+    with open('../private/history/kmlaonline.txt', 'w', encoding='utf-8') as f:
         for title in titles:
             f.write(title)
             f.write('\n')
@@ -55,7 +55,7 @@ for i in Announcement_list:
     writers.append(i.find_elements(By.TAG_NAME, "a")[1].text)
 
 history = []
-with open('./private/history/kmlaonline.txt', 'r', encoding='utf-8') as f:
+with open('../private/history/kmlaonline.txt', 'r', encoding='utf-8') as f:
     for line in f.readlines():
         history.append(line.rstrip("\n"))
     if history != titles:
