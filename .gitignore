@@ -1,0 +1,17 @@
+# created by virtualenv automatically
+private/
+picklesave.py
+
+# Ignore PyCharm files and directories
+.idea/
+*.iml
+
+# Ignore virtual environment directories
+.venv/
+env/
+
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+
